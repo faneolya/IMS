@@ -1,0 +1,1153 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contactez IMS – Impact Management Solutions à Port-Gentil, Gabon, pour vos projets de conseil, management et transformation numérique.">
+  <title>Contact | IMS – Impact Management Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* TYPOGRAPHIES GOOGLE FONTS */
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+    
+:root {
+  /* BLEUS IMS */
+  --navy: #02143E;
+  --navy-light: #03215D;
+  --blue: #053C93;
+  --blue-light: #1368CD;
+
+  /* OR IMS */
+  --gold: #E6A81B;
+  --gold-light: #F0CB4D;
+  --gold-champagne: #F6E888;
+
+  /* COULEURS COMPLEMENTAIRES */
+  --silver: #A7B0B7;
+  --white: #FFFFFF;
+  --light: #F5F6F8;
+  --text: #536174;
+  --dark: #142338;
+}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* POLICE DU CORPS */
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--dark);
+      line-height: 1.7;
+      background: white;
+    }
+
+    /* POLICE DES TITRES */
+    h1, h2, h3, h4, h5, h6,
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    /* POLICE DES ÉLÉMENTS COURANTS */
+    p, a, button, input, select, textarea, label {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+
+/* =================================
+   NAVBAR OFFICIELLE IMS
+================================= */
+
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(230,168,27,.25);
+}
+
+.navbar {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* LOGO ET IDENTITE */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-text strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+.brand-text span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+/* LIENS DE NAVIGATION */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+  transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold-light);
+}
+
+/* BOUTON CONTACT */
+
+.nav-links .contact-link {
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  padding: 10px 18px;
+  border-radius: 30px;
+  transition: .3s;
+}
+
+.nav-links .contact-link:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* MENU MOBILE */
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--white);
+  padding: 8px 13px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* TABLETTES ET MOBILES */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    min-height: 85px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: var(--navy);
+    padding: 20px 5% 25px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-top: 1px solid rgba(230,168,27,.25);
+    box-shadow: 0 12px 20px rgba(0,0,0,.15);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .nav-links .contact-link {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 9px 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text strong {
+    font-size: 22px;
+  }
+
+  .brand-text span {
+    font-size: 7px;
+  }
+}
+
+
+    /* HEADER */
+
+    header {
+      background: var(--navy);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,.15);
+    }
+
+    .navbar {
+      min-height: 88px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo img {
+      width: 145px;
+      max-height: 65px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e8edf4;
+      transition: .3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
+    }
+
+    .nav-contact {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 11px 19px;
+      border-radius: 3px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(7,26,51,.96), rgba(7,26,51,.78)),
+        url("assets/contact-banner.jpg") center/cover;
+      color: white;
+      padding: 95px 0 85px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      color: #d8e0e9;
+      max-width: 650px;
+      font-size: 17px;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 75px 0 45px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: #a98743;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+
+    .intro p {
+      color: var(--text);
+      max-width: 730px;
+      margin: auto;
+    }
+
+    /* CONTACT AREA */
+
+    .contact-section {
+      padding: 45px 0 95px;
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.4fr;
+      gap: 35px;
+      align-items: stretch;
+    }
+
+    /* CONTACT INFO */
+
+    .contact-info {
+      background: var(--navy);
+      color: white;
+      padding: 40px 35px;
+      border-radius: 5px;
+    }
+
+    .contact-info h2 {
+      font-size: 26px;
+      margin-bottom: 15px;
+    }
+
+    .contact-info > p {
+      color: #c5d0dc;
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 28px;
+    }
+
+    .info-icon {
+      width: 43px;
+      height: 43px;
+      min-width: 43px;
+      background: rgba(198,164,92,.15);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 19px;
+    }
+
+    .info-item h3 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .info-item p {
+      font-size: 13px;
+      color: #c5d0dc;
+    }
+
+    .contact-note {
+      border-top: 1px solid rgba(255,255,255,.15);
+      padding-top: 25px;
+      margin-top: 35px;
+      color: #c5d0dc;
+      font-size: 13px;
+    }
+
+    /* FORM */
+
+    .contact-form {
+      background: white;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0 8px 30px rgba(7,26,51,.06);
+    }
+
+    .contact-form h2 {
+      color: var(--navy);
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .form-intro {
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 20px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #dce2e9;
+      border-radius: 3px;
+      outline: none;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--dark);
+      background: white;
+      transition: .3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(198,164,92,.12);
+    }
+
+    .form-group textarea {
+      min-height: 145px;
+      resize: vertical;
+    }
+
+    .required-note {
+      color: #788596;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--text);
+      font-size: 12px;
+      margin-bottom: 22px;
+    }
+
+    .consent input {
+      margin-top: 4px;
+      accent-color: var(--gold);
+    }
+
+    .btn {
+      display: inline-block;
+      border: none;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 28px;
+      border-radius: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .form-message {
+      display: none;
+      margin-top: 18px;
+      padding: 13px;
+      background: #fff4df;
+      border-left: 4px solid var(--gold);
+      color: var(--navy);
+      font-size: 13px;
+    }
+
+    /* APPROACH */
+
+    .approach {
+      padding: 85px 0;
+      text-align: center;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .approach-card {
+      padding: 30px 25px;
+      border: 1px solid #e8ebef;
+      border-radius: 4px;
+    }
+
+    .approach-number {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+
+    .approach-card h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .approach-card p {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: var(--navy);
+      color: white;
+      padding: 65px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 13px;
+    }
+
+    .cta p {
+      color: #c5d0dc;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #041326;
+      color: #c4ceda;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 40px;
+    }
+
+    .footer-logo img {
+      width: 135px;
+      margin-bottom: 18px;
+    }
+
+    .footer-about p {
+      color: #aab7c6;
+      font-size: 14px;
+      max-width: 350px;
+    }
+
+    footer h4 {
+      color: white;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 11px;
+    }
+
+    .footer-links a {
+      color: #aab7c6;
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 22px;
+      text-align: center;
+      color: #8190a2;
+      font-size: 12px;
+    }
+
+    @media(max-width: 950px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 760px) {
+      .navbar {
+        min-height: 75px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 25px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .intro {
+        padding: 60px 0 30px;
+      }
+
+      .contact-form {
+        padding: 28px 20px;
+      }
+
+      .contact-info {
+        padding: 32px 25px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .form-group.full {
+        grid-column: auto;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+ 
+<header class="site-header">
+  <div class="container navbar">
+
+    <a href="index.html" class="brand">
+      <img src="assets/ims-logo.jpg" alt="Logo IMS">
+
+      <div class="brand-text">
+        <strong>IMS</strong>
+        <span>IMPACT MANAGEMENT SOLUTIONS</span>
+      </div>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+      aria-controls="mainNav">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="cabinet.html">Le cabinet</a>
+      <a href="services.html">Services</a>
+      <a href="solutions.html">Solutions numériques</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="actualites.html">Conseils</a>
+      <a href="contact.html" class="contact-link">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="eyebrow">Entrons en contact</div>
+
+      <h1>
+        Parlons de vos projets.
+        <span>Construisons l'avenir.</span>
+      </h1>
+
+      <p>
+        Vous êtes une entreprise, un entrepreneur ou porteur de projet
+        au Gabon ? Présentez-nous vos besoins et échangeons sur les
+        solutions adaptées à vos ambitions.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="intro container">
+
+    <div class="section-label">Contact IMS</div>
+
+    <h2 class="section-title">
+      Chaque transformation commence par un échange
+    </h2>
+
+    <p>
+      Que votre besoin concerne le conseil, l'organisation, la gestion,
+      le développement d'un outil numérique ou la structuration d'un
+      projet, nous vous invitons à prendre contact avec IMS.
+    </p>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact-section">
+
+    <div class="container contact-grid">
+
+      <!-- INFORMATIONS -->
+
+      <div class="contact-info">
+
+        <h2>Nos coordonnées</h2>
+
+        <p>
+          Retrouvez IMS à Port-Gentil et contactez-nous pour échanger
+          autour de vos besoins professionnels.
+        </p>
+
+        <div class="info-item">
+          <div class="info-icon">⌖</div>
+          <div>
+            <h3>Localisation</h3>
+            <p>Port-Gentil, Gabon</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">✉</div>
+          <div>
+            <h3>Adresse e-mail</h3>
+            <p>Coordonnée à communiquer</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">☎</div>
+          <div>
+            <h3>Téléphone</h3>
+            <p>Numéro à communiquer</p>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <strong>Impact Management Solutions</strong><br>
+          Impacter pour Transformer votre Avenir.
+        </div>
+
+      </div>
+
+      <!-- FORMULAIRE -->
+
+      <div class="contact-form">
+
+        <h2>Présentez-nous votre projet</h2>
+
+        <p class="form-intro">
+          Complétez les informations ci-dessous afin de nous permettre
+          de mieux comprendre votre demande.
+        </p>
+
+        <form id="contactForm">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="nom">Nom *</label>
+              <input type="text" id="nom" name="nom"
+                     placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-group">
+              <label for="prenom">Prénom *</label>
+              <input type="text" id="prenom" name="prenom"
+                     placeholder="Votre prénom" required>
+            </div>
+
+            <div class="form-group">
+              <label for="entreprise">Entreprise / Organisation</label>
+              <input type="text" id="entreprise" name="entreprise"
+                     placeholder="Nom de votre structure">
+            </div>
+
+            <div class="form-group">
+              <label for="fonction">Votre fonction</label>
+              <input type="text" id="fonction" name="fonction"
+                     placeholder="Dirigeant, responsable, entrepreneur...">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Adresse e-mail *</label>
+              <input type="email" id="email" name="email"
+                     placeholder="exemple@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="telephone">Téléphone *</label>
+              <input type="tel" id="telephone" name="telephone"
+                     placeholder="Votre numéro de téléphone" required>
+            </div>
+
+            <div class="form-group full">
+              <label for="objet">Objet de votre demande *</label>
+
+              <select id="objet" name="objet" required>
+                <option value="">Sélectionnez un domaine</option>
+                <option value="Conseil et accompagnement">
+                  Conseil et accompagnement
+                </option>
+                <option value="Organisation et management">
+                  Organisation et management
+                </option>
+                <option value="Solution numérique">
+                  Solution numérique
+                </option>
+                <option value="Création et structuration d'entreprise">
+                  Création et structuration d'entreprise
+                </option>
+                <option value="Étude et montage de projet">
+                  Étude et montage de projet
+                </option>
+                <option value="Autre demande">Autre demande</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="message">Votre message *</label>
+
+              <textarea id="message" name="message"
+                placeholder="Décrivez votre besoin, votre projet ou les difficultés que vous souhaitez résoudre..."
+                required></textarea>
+            </div>
+
+          </div>
+
+          <p class="required-note">* Champs obligatoires</p>
+
+          <label class="consent">
+            <input type="checkbox" id="consent" required>
+            <span>
+              J'accepte que les informations transmises soient utilisées
+              pour répondre à ma demande.
+            </span>
+          </label>
+
+          <button type="submit" class="btn">
+            Envoyer ma demande →
+          </button>
+
+          <div class="form-message" id="formMessage" role="status">
+            Votre formulaire est valide. L'envoi réel sera disponible
+            après connexion du formulaire au service de réception IMS.
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- NOTRE APPROCHE -->
+
+  <section class="approach container">
+
+    <div class="section-label">Notre démarche</div>
+
+    <h2 class="section-title">Comment se déroule un premier échange ?</h2>
+
+    <div class="approach-grid">
+
+      <div class="approach-card">
+        <div class="approach-number">01</div>
+        <h3>Écouter votre besoin</h3>
+        <p>
+          Comprendre votre organisation, vos objectifs et les
+          difficultés que vous souhaitez résoudre.
+        </p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-number">02</div>
+        <h3>Analyser votre situation</h3>
+        <p>
+          Identifier les enjeux, les priorités et les pistes
+          d'amélioration adaptées à votre contexte.
+        </p>
+      </div>
+
+      <div class="approach-card">
+        <div class="approach-number">03</div>
+        <h3>Envisager des solutions</h3>
+        <p>
+          Définir les prochaines étapes et les modalités
+          d'accompagnement envisageables.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+    <div class="container">
+
+      <div class="eyebrow">IMS – Impact Management Solutions</div>
+
+      <h2>Impacter pour Transformer votre Avenir.</h2>
+
+      <p>
+        Donnons ensemble une nouvelle dimension à vos projets
+        et à votre organisation.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+
+          <a href="index.html" class="footer-logo">
+            <img src="assets/ims-logo.jpg" alt="Logo IMS">
+          </a>
+
+          <p>
+            Impact Management Solutions accompagne les organisations
+            dans leur structuration, leur développement et leur
+            transformation numérique.
+          </p>
+
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="cabinet.html">Le cabinet</a></li>
+            <li><a href="services.html">Nos services</a></li>
+            <li><a href="solutions.html">Solutions numériques</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="actualites.html">Conseils & actualités</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+
+          <ul class="footer-links">
+            <li>Port-Gentil, Gabon</li>
+            <li><a href="contact.html">Nous contacter</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> IMS – Impact Management Solutions.
+        Tous droits réservés.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Démonstration du formulaire :
+    // aucun message n'est envoyé à ce stade.
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
+
+    contactForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      formMessage.style.display = "block";
+    });
+  </script>
+
+</body>
+</html>

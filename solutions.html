@@ -1,0 +1,1214 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IMS conçoit des solutions numériques, logiciels de gestion, applications métiers et tableaux de bord pour les entreprises gabonaises.">
+  <title>Solutions numériques | IMS – Impact Management Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    
+:root {
+  /* BLEUS IMS */
+  --navy: #02143E;
+  --navy-light: #03215D;
+  --blue: #053C93;
+  --blue-light: #1368CD;
+
+  /* OR IMS */
+  --gold: #E6A81B;
+  --gold-light: #F0CB4D;
+  --gold-champagne: #F6E888;
+
+  /* COULEURS COMPLEMENTAIRES */
+  --silver: #A7B0B7;
+  --white: #FFFFFF;
+  --light: #F5F6F8;
+  --text: #536174;
+  --dark: #142338;
+}
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--dark);
+      line-height: 1.7;
+      background: white;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1160px, 90%);
+      margin: auto;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.2;
+    }
+
+
+/* =================================
+   NAVBAR OFFICIELLE IMS
+================================= */
+
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(230,168,27,.25);
+}
+
+.navbar {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* LOGO ET IDENTITE */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-text strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+.brand-text span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+/* LIENS DE NAVIGATION */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+  transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold-light);
+}
+
+/* BOUTON CONTACT */
+
+.nav-links .contact-link {
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  padding: 10px 18px;
+  border-radius: 30px;
+  transition: .3s;
+}
+
+.nav-links .contact-link:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* MENU MOBILE */
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--white);
+  padding: 8px 13px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* TABLETTES ET MOBILES */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    min-height: 85px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: var(--navy);
+    padding: 20px 5% 25px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-top: 1px solid rgba(230,168,27,.25);
+    box-shadow: 0 12px 20px rgba(0,0,0,.15);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .nav-links .contact-link {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 9px 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text strong {
+    font-size: 22px;
+  }
+
+  .brand-text span {
+    font-size: 7px;
+  }
+}
+
+
+    /* HEADER */
+
+    header {
+      background: var(--navy);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(201,164,92,.25);
+    }
+
+    .navbar {
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .logo img {
+      width: 145px;
+      max-height: 65px;
+      object-fit: contain;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    nav a {
+      font-size: 13px;
+      color: #e0e6ed;
+      transition: .3s;
+    }
+
+    nav a:hover,
+    nav a.active { color: var(--gold-light); }
+
+    .nav-contact {
+      border: 1px solid var(--gold);
+      padding: 11px 18px;
+      color: var(--gold-light);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: white;
+      padding: 8px 12px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(100deg, rgba(7,23,45,.97), rgba(7,23,45,.76)),
+        url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1800&q=85");
+      background-size: cover;
+      background-position: center;
+      padding: 110px 0;
+      color: white;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 65px);
+      max-width: 850px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span { color: var(--gold-light); }
+
+    .hero p {
+      max-width: 680px;
+      color: #d7e0e9;
+      font-size: 17px;
+    }
+
+    .breadcrumb {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #c5cfdb;
+    }
+
+    .breadcrumb span { color: var(--gold-light); }
+
+    /* INTRO */
+
+    .intro {
+      padding: 90px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 65px;
+    }
+
+    .section-label {
+      color: #a9823e;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .intro h2,
+    .section-heading h2 {
+      color: var(--navy);
+      font-size: clamp(32px, 4vw, 44px);
+      margin-bottom: 22px;
+    }
+
+    .intro p {
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .intro-image img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* SOLUTIONS */
+
+    .solutions {
+      background: var(--cream);
+      padding: 95px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .section-heading p { color: var(--text); }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .solution-card {
+      background: white;
+      padding: 34px 28px;
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 10px 30px rgba(7,23,45,.04);
+      transition: .3s;
+    }
+
+    .solution-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 35px rgba(7,23,45,.1);
+    }
+
+    .solution-icon {
+      width: 55px;
+      height: 55px;
+      background: var(--navy);
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      margin-bottom: 23px;
+    }
+
+    .solution-card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      margin-bottom: 13px;
+    }
+
+    .solution-card p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* DOMAINES */
+
+    .domains {
+      padding: 95px 0;
+    }
+
+    .domain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .domain-image img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+    }
+
+    .domains h2 {
+      font-size: 40px;
+      color: var(--navy);
+      margin-bottom: 22px;
+    }
+
+    .domains p {
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .domain-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .domain-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e9e9e9;
+      color: var(--dark);
+    }
+
+    .domain-list li::before {
+      content: "✓";
+      color: #a9823e;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    /* DEMONSTRATION */
+
+    .demo {
+      background: var(--navy);
+      color: white;
+      padding: 100px 0;
+    }
+
+    .demo .section-heading h2 { color: white; }
+    .demo .section-heading p { color: #c5cfdb; }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .dashboard {
+      background: #fff;
+      padding: 24px;
+      color: var(--navy);
+      box-shadow: 0 20px 50px rgba(0,0,0,.2);
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .dashboard-header h3 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+    }
+
+    .dashboard-label {
+      background: #f2ead9;
+      color: #8d6a2d;
+      padding: 5px 9px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .stat {
+      background: #f5f6f8;
+      padding: 14px 10px;
+    }
+
+    .stat small {
+      display: block;
+      color: #69788a;
+      font-size: 10px;
+    }
+
+    .stat strong {
+      font-size: 22px;
+      color: var(--navy);
+    }
+
+    .chart {
+      height: 150px;
+      background: linear-gradient(to top, #f5f6f8, #fff);
+      border-bottom: 1px solid #dce1e8;
+      display: flex;
+      align-items: end;
+      justify-content: space-around;
+      padding: 15px 12px 0;
+      gap: 12px;
+    }
+
+    .bar {
+      width: 12%;
+      background: var(--gold);
+      min-height: 20px;
+    }
+
+    .chart-label {
+      display: flex;
+      justify-content: space-around;
+      color: #788596;
+      font-size: 10px;
+      margin-top: 8px;
+    }
+
+    .demo-content h2 {
+      font-size: 38px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .demo-content p {
+      color: #c5cfdb;
+      margin-bottom: 18px;
+    }
+
+    .demo-note {
+      color: var(--gold-light);
+      font-size: 12px;
+      margin-top: 20px;
+      border-left: 2px solid var(--gold);
+      padding-left: 13px;
+    }
+
+    /* PROCESS */
+
+    .process {
+      padding: 95px 0;
+      background: var(--cream);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .process-item {
+      background: white;
+      padding: 28px 22px;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .process-item span {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: var(--gold);
+    }
+
+    .process-item h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin: 12px 0;
+    }
+
+    .process-item p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 90px 0;
+    }
+
+    .cta h2 {
+      color: var(--navy);
+      font-size: 40px;
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      color: var(--text);
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy);
+      padding: 15px 28px;
+      font-weight: 700;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #041020;
+      color: #c5cfdb;
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 50px;
+      padding-bottom: 45px;
+    }
+
+    .footer-logo {
+      width: 140px;
+      margin-bottom: 20px;
+    }
+
+    footer h3 {
+      color: var(--gold-light);
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    footer p, footer a {
+      font-size: 14px;
+      color: #c5cfdb;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 22px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 900px) {
+      nav { gap: 12px; }
+      nav a { font-size: 11px; }
+      .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media(max-width: 700px) {
+      .navbar { min-height: 75px; }
+      .menu-toggle { display: block; }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 25px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        border-top: 1px solid rgba(201,164,92,.25);
+      }
+
+      nav.open { display: flex; }
+      nav a { font-size: 14px; }
+
+      .hero { padding: 75px 0; }
+
+      .intro-grid,
+      .domain-grid,
+      .demo-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .solutions-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-image img,
+      .domain-image img {
+        height: 320px;
+      }
+
+      .intro,
+      .solutions,
+      .domains,
+      .demo,
+      .process,
+      .cta {
+        padding-top: 65px;
+        padding-bottom: 65px;
+      }
+
+      .dashboard { padding: 15px; }
+      .dashboard-stats { grid-template-columns: repeat(3, 1fr); }
+      .stat strong { font-size: 17px; }
+      .demo-content h2, .cta h2 { font-size: 31px; }
+
+      .footer-grid { gap: 35px; }
+    }
+  </style>
+</head>
+
+<body>
+
+
+<header class="site-header">
+  <div class="container navbar">
+
+    <a href="index.html" class="brand">
+      <img src="assets/ims-logo.jpg" alt="Logo IMS">
+
+      <div class="brand-text">
+        <strong>IMS</strong>
+        <span>IMPACT MANAGEMENT SOLUTIONS</span>
+      </div>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+      aria-controls="mainNav">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="cabinet.html">Le cabinet</a>
+      <a href="services.html">Services</a>
+      <a href="solutions.html">Solutions numériques</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="actualites.html">Conseils</a>
+      <a href="contact.html" class="contact-link">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Innovation & transformation numérique</div>
+
+      <h1>Le numérique au service de <span>votre performance.</span></h1>
+
+      <p>
+        Nous concevons des outils numériques adaptés aux réalités
+        des entreprises pour simplifier la gestion, améliorer le suivi
+        des activités et faciliter la prise de décision.
+      </p>
+
+      <div class="breadcrumb">
+        Accueil / <span>Solutions numériques</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRODUCTION -->
+
+  <section class="intro">
+    <div class="container intro-grid">
+
+      <div>
+        <div class="section-label">Notre expertise digitale</div>
+
+        <h2>Des outils pensés pour répondre à vos besoins réels.</h2>
+
+        <p>
+          La transformation numérique ne consiste pas seulement
+          à utiliser des logiciels. Elle consiste surtout à améliorer
+          la manière dont une organisation travaille, suit ses activités
+          et exploite ses informations.
+        </p>
+
+        <p>
+          IMS accompagne les entreprises dans l'identification de leurs
+          besoins numériques et dans la conception de solutions adaptées
+          à leurs processus.
+        </p>
+
+        <p>
+          Notre objectif : rendre la gestion plus claire, les informations
+          plus accessibles et les décisions mieux éclairées.
+        </p>
+      </div>
+
+      <div class="intro-image">
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=85"
+          alt="Collaboration autour d'un projet numérique">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+
+  <section class="solutions">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="section-label">Nos solutions</div>
+        <h2>Des outils numériques pour chaque enjeu.</h2>
+        <p>
+          Des solutions conçues pour faciliter les opérations,
+          centraliser les données et améliorer le pilotage des activités.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+
+        <article class="solution-card">
+          <div class="solution-icon">▦</div>
+          <h3>Logiciels de gestion</h3>
+          <p>
+            Des applications métiers pour organiser les opérations,
+            centraliser les informations et faciliter le suivi quotidien.
+          </p>
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-icon">▤</div>
+          <h3>Tableaux de bord</h3>
+          <p>
+            Des interfaces de pilotage pour visualiser les indicateurs,
+            suivre les performances et mieux comprendre les activités.
+          </p>
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-icon">▣</div>
+          <h3>Applications web</h3>
+          <p>
+            Des applications accessibles depuis un navigateur,
+            adaptées aux besoins des équipes et des organisations.
+          </p>
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-icon">▧</div>
+          <h3>Applications mobiles</h3>
+          <p>
+            Des outils mobiles pour faciliter l'accès aux informations
+            et accompagner les opérations sur le terrain.
+          </p>
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-icon">⇄</div>
+          <h3>Digitalisation des processus</h3>
+          <p>
+            La dématérialisation et la simplification de certaines tâches
+            afin de réduire les opérations manuelles répétitives.
+          </p>
+        </article>
+
+        <article class="solution-card">
+          <div class="solution-icon">⌘</div>
+          <h3>Suivi de projets</h3>
+          <p>
+            Des outils pour planifier les activités, suivre les étapes,
+            organiser les ressources et visualiser l'avancement.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DOMAINES D'APPLICATION -->
+
+  <section class="domains">
+    <div class="container domain-grid">
+
+      <div class="domain-image">
+        <img
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=85"
+          alt="Analyse de données et indicateurs de performance">
+      </div>
+
+      <div>
+        <div class="section-label">Applications professionnelles</div>
+
+        <h2>Le numérique au cœur de vos activités.</h2>
+
+        <p>
+          Les outils numériques peuvent répondre à des besoins très
+          différents selon la taille de votre entreprise, votre secteur
+          d'activité et votre organisation.
+        </p>
+
+        <ul class="domain-list">
+          <li>Gestion administrative et documentaire.</li>
+          <li>Suivi commercial et relation client.</li>
+          <li>Gestion des stocks et des opérations.</li>
+          <li>Suivi des ressources et des activités.</li>
+          <li>Analyse des données et indicateurs de performance.</li>
+          <li>Gestion et suivi de projets.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXEMPLE TABLEAU DE BORD -->
+
+  <section class="demo">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="section-label">Illustration de nos possibilités</div>
+        <h2>Visualiser pour mieux décider.</h2>
+        <p>
+          Un outil de gestion bien conçu permet de transformer
+          des données en informations utiles à la décision.
+        </p>
+      </div>
+
+      <div class="demo-grid">
+
+        <div class="dashboard">
+
+          <div class="dashboard-header">
+            <h3>Tableau de bord de gestion</h3>
+            <span class="dashboard-label">MAQUETTE ILLUSTRATIVE</span>
+          </div>
+
+          <div class="dashboard-stats">
+
+            <div class="stat">
+              <small>Activités</small>
+              <strong>128</strong>
+            </div>
+
+            <div class="stat">
+              <small>Projets</small>
+              <strong>24</strong>
+            </div>
+
+            <div class="stat">
+              <small>Suivis</small>
+              <strong>86</strong>
+            </div>
+
+          </div>
+
+          <h3 style="font-family:'DM Sans';font-size:14px;">
+            Évolution des activités
+          </h3>
+
+          <div class="chart">
+            <div class="bar" style="height:35%"></div>
+            <div class="bar" style="height:55%"></div>
+            <div class="bar" style="height:45%"></div>
+            <div class="bar" style="height:75%"></div>
+            <div class="bar" style="height:65%"></div>
+            <div class="bar" style="height:90%"></div>
+          </div>
+
+          <div class="chart-label">
+            <span>Jan.</span>
+            <span>Fév.</span>
+            <span>Mars</span>
+            <span>Avr.</span>
+            <span>Mai</span>
+            <span>Juin</span>
+          </div>
+
+        </div>
+
+        <div class="demo-content">
+          <h2>Vos données deviennent un véritable outil de pilotage.</h2>
+
+          <p>
+            Un tableau de bord personnalisé peut permettre à un dirigeant
+            de suivre ses indicateurs essentiels depuis une interface
+            simple et centralisée.
+          </p>
+
+          <p>
+            Les données, les indicateurs et les fonctionnalités sont
+            définis en fonction des besoins de chaque organisation.
+          </p>
+
+          <div class="demo-note">
+            Exemple visuel fictif destiné à illustrer une possibilité
+            de conception. Les chiffres affichés ne correspondent pas
+            à des données réelles d'entreprise.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODOLOGIE -->
+
+  <section class="process">
+    <div class="container">
+
+      <div class="section-heading">
+        <div class="section-label">Notre démarche digitale</div>
+        <h2>De votre besoin à votre solution numérique.</h2>
+        <p>
+          Chaque solution commence par une compréhension précise
+          du problème à résoudre.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-item">
+          <span>01</span>
+          <h3>Diagnostic</h3>
+          <p>
+            Comprendre votre organisation et identifier
+            les besoins à couvrir.
+          </p>
+        </div>
+
+        <div class="process-item">
+          <span>02</span>
+          <h3>Conception</h3>
+          <p>
+            Définir les fonctionnalités et concevoir
+            l'interface de la solution.
+          </p>
+        </div>
+
+        <div class="process-item">
+          <span>03</span>
+          <h3>Développement</h3>
+          <p>
+            Réaliser la solution selon les besoins
+            et les spécifications validés.
+          </p>
+        </div>
+
+        <div class="process-item">
+          <span>04</span>
+          <h3>Accompagnement</h3>
+          <p>
+            Préparer la prise en main et accompagner
+            l'adoption de l'outil.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta">
+    <div class="container">
+      <div class="section-label">Votre projet numérique</div>
+      <h2>Et si nous construisions votre prochain outil ?</h2>
+
+      <p>
+        Vous souhaitez digitaliser votre activité, développer
+        une application ou disposer d'un tableau de bord adapté
+        à votre entreprise ?
+      </p>
+
+      <a href="contact.html" class="btn">
+        Présentez votre besoin à IMS →
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <img src="assets/ims-logo.jpg" alt="Logo IMS" class="footer-logo">
+        <p>
+          IMS – Impact Management Solutions accompagne les organisations
+          dans leur structuration, leur développement et leur transformation.
+        </p>
+      </div>
+
+      <div>
+        <h3>Navigation</h3>
+        <div class="footer-links">
+          <a href="index.html">Accueil</a>
+          <a href="cabinet.html">Le Cabinet</a>
+          <a href="services.html">Nos services</a>
+          <a href="solutions.html">Solutions numériques</a>
+          <a href="realisations.html">Réalisations</a>
+          <a href="actualites.html">Actualités</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h3>Notre engagement</h3>
+        <p>Innovation – Performance – Transformation</p>
+        <br>
+        <p>Port-Gentil, Gabon</p>
+        <br>
+        <p><strong>Impacter pour Transformer votre Avenir.</strong></p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © <span id="year"></span> IMS – Impact Management Solutions.
+      Tous droits réservés.
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.textContent = isOpen ? "✕" : "☰";
+  });
+
+  document.querySelectorAll("#mainNav a").forEach(link => {
+    link.addEventListener("click", () => {
+      mainNav.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    });
+  });
+
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>

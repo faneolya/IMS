@@ -1,0 +1,1355 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="IMS - Impact Management Solutions accompagne les entreprises gabonaises en conseil, organisation, gestion de projets et solutions numériques.">
+
+  <meta name="theme-color" content="#02143E">
+
+  <title>IMS | Impact Management Solutions</title>
+
+  <!-- TYPOGRAPHIES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* =====================================
+       IDENTITÉ VISUELLE IMS
+    ===================================== */
+
+    :root {
+      /* BLEUS IMS */
+      --navy: #02143E;
+      --navy-light: #03215D;
+      --blue: #053C93;
+      --blue-light: #1368CD;
+
+      /* OR IMS */
+      --gold: #E6A81B;
+      --gold-light: #F0CB4D;
+      --gold-champagne: #F6E888;
+
+      /* COULEURS COMPLÉMENTAIRES */
+      --silver: #A7B0B7;
+      --white: #FFFFFF;
+      --light: #F5F6F8;
+      --gray: #F1F3F7;
+      --muted: #536174;
+      --text: #536174;
+      --dark: #142338;
+
+      /* EFFETS */
+      --border: #E2E7EF;
+      --shadow: 0 15px 35px rgba(2, 20, 62, 0.10);
+    }
+
+    /* =====================================
+       BASE
+    ===================================== */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text);
+      line-height: 1.7;
+      background: var(--white);
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    .section-title {
+      font-family: 'Playfair Display', serif;
+    }
+
+    p, a, button, input, select, textarea, label {
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+
+/* =================================
+   NAVBAR OFFICIELLE IMS
+================================= */
+
+.site-header {
+  background: var(--navy);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(230,168,27,.25);
+}
+
+.navbar {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* LOGO ET IDENTITE */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 8px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.brand-text strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+.brand-text span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+/* LIENS DE NAVIGATION */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--white);
+  transition: .3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--gold-light);
+}
+
+/* BOUTON CONTACT */
+
+.nav-links .contact-link {
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  padding: 10px 18px;
+  border-radius: 30px;
+  transition: .3s;
+}
+
+.nav-links .contact-link:hover {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+/* MENU MOBILE */
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--white);
+  padding: 8px 13px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* TABLETTES ET MOBILES */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    min-height: 85px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    background: var(--navy);
+    padding: 20px 5% 25px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    border-top: 1px solid rgba(230,168,27,.25);
+    box-shadow: 0 12px 20px rgba(0,0,0,.15);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  .nav-links .contact-link {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 10px;
+    padding: 9px 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-text strong {
+    font-size: 22px;
+  }
+
+  .brand-text span {
+    font-size: 7px;
+  }
+}
+
+
+    /* =====================================
+       HEADER
+    ===================================== */
+
+    header {
+      background: var(--navy);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .navbar {
+      min-height: 85px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .logo-text strong {
+      display: block;
+      font-size: 23px;
+      letter-spacing: 3px;
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+    }
+
+    .logo-text span {
+      color: var(--gold-light);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-size: 13px;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-links .contact-link {
+      border: 1px solid var(--gold);
+      padding: 11px 18px;
+      border-radius: 30px;
+      color: var(--gold-light);
+      transition: .3s;
+    }
+
+    .nav-links .contact-link:hover {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--white);
+      padding: 8px 12px;
+      font-size: 22px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .hero {
+      background:
+        linear-gradient(
+          90deg,
+          rgba(2, 20, 62, 0.96),
+          rgba(3, 33, 93, 0.78)
+        ),
+        url("./assets/Collaboration.png") center/cover no-repeat;
+
+      color: var(--white);
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 90px 0;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 22px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 65px);
+      line-height: 1.13;
+      margin-bottom: 25px;
+      font-family: 'Playfair Display', serif;
+      color: var(--white);
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      color: #D2DCE8;
+      font-size: 17px;
+      max-width: 620px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 13px;
+      transition: .3s;
+      text-align: center;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-light);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(230, 168, 27, 0.25);
+    }
+
+    .btn-outline {
+      border: 1px solid #9AAABD;
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold-light);
+    }
+
+    /* =====================================
+       HERO VISUAL
+    ===================================== */
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 380px;
+    }
+
+    .circle {
+      width: 320px;
+      height: 320px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      box-shadow: 0 0 60px rgba(230, 168, 27, 0.08);
+    }
+
+    .circle::before {
+      content: "";
+      position: absolute;
+      inset: 25px;
+      border: 1px solid rgba(240, 203, 77, 0.35);
+      border-radius: 50%;
+    }
+
+    .circle-center {
+      width: 150px;
+      height: 150px;
+      border-radius: 25px;
+      background: linear-gradient(145deg, var(--blue), var(--navy));
+      border: 1px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: var(--gold-light);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.30);
+    }
+
+    .circle-center strong {
+      font-size: 43px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .circle-center small {
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    /* =====================================
+       PRÉSENTATION
+    ===================================== */
+
+    .presentation {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      display: block;
+    }
+
+    .section-title {
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 43px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 35px;
+    }
+
+    .presentation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .presentation-box {
+      background: linear-gradient(
+        145deg,
+        var(--navy),
+        var(--navy-light)
+      );
+      color: var(--white);
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--gold);
+    }
+
+    .presentation-box h3 {
+      color: var(--gold-light);
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .presentation-box p {
+      color: #D2DCE8;
+    }
+
+    /* =====================================
+       SERVICES
+    ===================================== */
+
+    .services {
+      background: var(--gray);
+      padding: 100px 0;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 30px 25px;
+      border-radius: 15px;
+      border: 1px solid var(--border);
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(230, 168, 27, 0.12);
+      color: var(--gold);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 23px;
+      border-radius: 12px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =====================================
+       POURQUOI IMS
+    ===================================== */
+
+    .why {
+      padding: 100px 0;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .why-panel {
+      background: linear-gradient(
+        145deg,
+        var(--navy),
+        var(--blue)
+      );
+      padding: 40px;
+      border-radius: 20px;
+      color: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .why-panel h3 {
+      color: var(--gold-light);
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .why-panel ul {
+      list-style: none;
+    }
+
+    .why-panel li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    }
+
+    .why-panel li::before {
+      content: "✓";
+      color: var(--gold-light);
+      margin-right: 12px;
+      font-weight: bold;
+    }
+
+    /* =====================================
+       MÉTHODE
+    ===================================== */
+
+    .method {
+      background: var(--gray);
+      padding: 100px 0;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .method-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 15px;
+      border-top: 3px solid var(--gold);
+      transition: .3s;
+    }
+
+    .method-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .method-card span {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .method-card h3 {
+      color: var(--navy);
+      margin: 15px 0;
+    }
+
+    .method-card p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* =====================================
+       CTA
+    ===================================== */
+
+    .cta {
+      padding: 70px 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(
+        110deg,
+        var(--navy),
+        var(--navy-light),
+        var(--blue)
+      );
+      border-radius: 20px;
+      padding: 55px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      color: var(--white);
+      border: 1px solid rgba(230, 168, 27, 0.30);
+    }
+
+    .cta-box h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .cta-box p {
+      color: #D2DCE8;
+    }
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    footer {
+      background: #010D29;
+      color: var(--white);
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 50px;
+    }
+
+    footer h4 {
+      color: var(--gold-light);
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    footer p,
+    footer a,
+    footer span {
+      color: #B9C6D5;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255, 255, 255, 0.13);
+      margin-top: 45px;
+      padding-top: 22px;
+      color: #8192A7;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    /* =====================================
+       RESPONSIVE
+    ===================================== */
+
+    @media(max-width: 1100px) {
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+    }
+
+    @media(max-width: 1000px) {
+      .services-grid,
+      .method-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+    }
+
+    @media(max-width: 800px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: var(--navy);
+        padding: 25px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 8px 0;
+        font-size: 14px;
+      }
+
+      .nav-links .contact-link {
+        display: inline-block;
+        text-align: center;
+        margin-top: 8px;
+      }
+
+      .presentation-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero {
+        padding: 85px 0;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: clamp(36px, 8vw, 52px);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media(max-width: 500px) {
+      .services-grid,
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .presentation,
+      .services,
+      .why,
+      .method {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .buttons .btn {
+        width: 100%;
+      }
+
+      .presentation-box,
+      .why-panel {
+        padding: 28px;
+      }
+
+      .cta-box {
+        padding: 30px;
+      }
+
+      .cta-box h2 {
+        font-size: 27px;
+      }
+
+      .logo img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .logo-text strong {
+        font-size: 20px;
+      }
+
+      .logo-text span {
+        font-size: 8px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================
+       HEADER
+  ===================================== -->
+
+  
+<header class="site-header">
+  <div class="container navbar">
+
+    <a href="index.html" class="brand">
+      <img src="assets/ims-logo.jpg" alt="Logo IMS">
+
+      <div class="brand-text">
+        <strong>IMS</strong>
+        <span>IMPACT MANAGEMENT SOLUTIONS</span>
+      </div>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+      aria-controls="mainNav">
+      ☰
+    </button>
+
+    <nav class="nav-links" id="mainNav">
+      <a href="index.html">Accueil</a>
+      <a href="cabinet.html">Le cabinet</a>
+      <a href="services.html">Services</a>
+      <a href="solutions.html">Solutions numériques</a>
+      <a href="realisations.html">Réalisations</a>
+      <a href="actualites.html">Conseils</a>
+      <a href="contact.html" class="contact-link">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+  <main>
+
+    <!-- =====================================
+         HERO
+    ===================================== -->
+
+    <section class="hero">
+      <div class="container hero-content">
+
+        <div>
+          <span class="eyebrow">
+            Votre partenaire de transformation
+          </span>
+
+          <h1>
+            Donner une nouvelle dimension à
+            <span>votre organisation.</span>
+          </h1>
+
+          <p>
+            IMS accompagne les entreprises gabonaises dans leur
+            structuration, leur organisation et leur transformation
+            numérique, avec une approche pragmatique orientée vers
+            les résultats.
+          </p>
+
+          <div class="buttons">
+            <a href="contact.html" class="btn btn-gold">
+              Parlons de votre projet
+            </a>
+
+            <a href="services.html" class="btn btn-outline">
+              Découvrir nos services
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================
+         PRÉSENTATION
+    ===================================== -->
+
+    <section class="presentation">
+      <div class="container presentation-grid">
+
+        <div>
+          <span class="section-label">Qui sommes-nous ?</span>
+
+          <h2 class="section-title">
+            Des solutions concrètes pour faire évoluer votre entreprise.
+          </h2>
+
+          <p class="section-intro">
+            Dans un environnement économique en constante évolution,
+            les organisations doivent pouvoir compter sur une gestion
+            structurée, des outils performants et une vision claire
+            de leurs objectifs.
+          </p>
+
+          <a href="cabinet.html" class="btn btn-gold">
+            Découvrir le cabinet
+          </a>
+        </div>
+
+        <div class="presentation-box">
+          <h3>Notre ambition</h3>
+
+          <p>
+            Accompagner les entreprises, les entrepreneurs et les
+            porteurs de projets dans leurs défis organisationnels,
+            stratégiques et numériques.
+
+            <br><br>
+
+            Notre objectif : transformer les idées en solutions
+            opérationnelles et durables.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================
+         SERVICES
+    ===================================== -->
+
+    <section class="services">
+      <div class="container">
+
+        <span class="section-label">Nos domaines d'expertise</span>
+
+        <h2 class="section-title">
+          Quatre leviers pour transformer votre activité.
+        </h2>
+
+        <p class="section-intro">
+          IMS met son savoir-faire au service des organisations
+          qui souhaitent améliorer leur fonctionnement et développer
+          leur potentiel.
+        </p>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon">◇</div>
+            <h3>Conseil & accompagnement</h3>
+            <p>
+              Création d'entreprise, structuration, diagnostics,
+              business plans et études de faisabilité.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▦</div>
+            <h3>Solutions numériques</h3>
+            <p>
+              Développement d'outils de gestion, applications
+              professionnelles et digitalisation.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◎</div>
+            <h3>Organisation & management</h3>
+            <p>
+              Organisation du personnel, clarification des
+              responsabilités et optimisation du travail.
+            </p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">↗</div>
+            <h3>Projets innovants</h3>
+            <p>
+              Conception, études, montage de projets et
+              accompagnement des entrepreneurs.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================
+         POURQUOI IMS
+    ===================================== -->
+
+    <section class="why">
+      <div class="container why-grid">
+
+        <div>
+          <span class="section-label">Pourquoi choisir IMS ?</span>
+
+          <h2 class="section-title">
+            Comprendre vos enjeux pour construire les bonnes solutions.
+          </h2>
+
+          <p class="section-intro">
+            Nous privilégions une approche fondée sur l'écoute,
+            l'analyse et la recherche de solutions adaptées aux
+            réalités des entreprises gabonaises.
+          </p>
+
+          <a href="services.html" class="btn btn-gold">
+            Explorer nos expertises
+          </a>
+        </div>
+
+        <div class="why-panel">
+          <h3>Notre engagement</h3>
+
+          <ul>
+            <li>Une approche centrée sur vos besoins réels</li>
+            <li>Des solutions adaptées à votre organisation</li>
+            <li>Une démarche structurée et rigoureuse</li>
+            <li>Un accompagnement orienté vers les résultats</li>
+            <li>Une logique d'amélioration continue</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================
+         MÉTHODE
+    ===================================== -->
+
+    <section class="method">
+      <div class="container">
+
+        <span class="section-label">Notre méthode</span>
+
+        <h2 class="section-title">
+          De l'analyse à la transformation.
+        </h2>
+
+        <p class="section-intro">
+          Chaque accompagnement suit une démarche claire,
+          adaptée à vos objectifs et à vos priorités.
+        </p>
+
+        <div class="method-grid">
+
+          <div class="method-card">
+            <span>ÉTAPE 01</span>
+            <h3>Écouter</h3>
+            <p>
+              Comprendre votre situation, vos besoins et vos attentes.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <span>ÉTAPE 02</span>
+            <h3>Analyser</h3>
+            <p>
+              Identifier les difficultés et les opportunités.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <span>ÉTAPE 03</span>
+            <h3>Construire</h3>
+            <p>
+              Définir des solutions et un plan d'action adapté.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <span>ÉTAPE 04</span>
+            <h3>Accompagner</h3>
+            <p>
+              Soutenir la mise en œuvre et suivre les évolutions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================
+         CONTACT CTA
+    ===================================== -->
+
+    <section class="cta">
+      <div class="container">
+
+        <div class="cta-box">
+
+          <div>
+            <h2>Votre prochain projet mérite une méthode claire.</h2>
+            <p>
+              Échangeons sur vos objectifs et les solutions possibles.
+            </p>
+          </div>
+
+          <a href="contact.html" class="btn btn-gold">
+            Contacter IMS
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================
+       FOOTER
+  ===================================== -->
+
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <a href="index.html" class="logo">
+            <img src="assets/ims-logo.jpg" alt="Logo IMS">
+            <div class="logo-text">
+              <strong>IMS</strong>
+              <span>IMPACT MANAGEMENT SOLUTIONS</span>
+            </div>
+          </a>
+
+          <p style="margin-top:20px">
+            Impacter pour transformer votre avenir.
+            <br>
+            Conseil, organisation, innovation et solutions numériques
+            au service des entreprises gabonaises.
+          </p>
+        </div>
+
+        <div>
+          <h4>Navigation</h4>
+
+          <div class="footer-links">
+            <a href="cabinet.html">Le cabinet</a>
+            <a href="services.html">Nos services</a>
+            <a href="solutions.html">Solutions numériques</a>
+            <a href="realisations.html">Réalisations</a>
+            <a href="actualites.html">Conseils & actualités</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Nous contacter</h4>
+
+          <div class="footer-links">
+            <a href="contact.html">Demander un échange</a>
+            <a href="contact.html">Présenter un projet</a>
+            <span>Port-Gentil, Gabon</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © <span id="year"></span> IMS – Impact Management Solutions.
+        Tous droits réservés. Faneolia BISSANGOYE
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =====================================
+       JAVASCRIPT
+  ===================================== -->
+
+  <script>
+    // MENU MOBILE
+    
+const menuToggle = document.getElementById("menuToggle");
+const mainNav = document.getElementById("mainNav");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = mainNav.classList.toggle("active");
+
+  menuToggle.setAttribute("aria-expanded", isOpen);
+  menuToggle.setAttribute(
+    "aria-label",
+    isOpen ? "Fermer le menu" : "Ouvrir le menu"
+  );
+
+  menuToggle.textContent = isOpen ? "✕" : "☰";
+});
+
+document.querySelectorAll("#mainNav a").forEach(link => {
+  link.addEventListener("click", () => {
+    mainNav.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+    menuToggle.textContent = "☰";
+  });
+});
+
+    // ANNEE DYNAMIQUE
+
+    const yearElement = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    yearElement.textContent = currentYear;
+  </script>
+
+</body>
+</html>
